@@ -59,7 +59,7 @@ const Login = () => {
   return (
     <div className="outerBox">
       <Box className="outerBoxs" width="100%">
-        <Card className="loginBox" width="40%">
+        <Card className="loginBox">
           <p>My Account</p>
           <form className="form">
             <label style={{ textAlign: "left" }}>Email</label>
@@ -113,7 +113,7 @@ const Login = () => {
             <a href="#">Create an account</a>
           </form>
         </Card>
-        <Box padding="15px" w="30%">
+        <Box className="register"padding="15px" w="30%">
           <b>New customers</b>
           <p>Set up an account with us and you will be able to:</p>
           <br />

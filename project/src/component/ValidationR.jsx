@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ValidationR = (values) => {
-  let errors = {};
+  let errors = {}
   if (!values.firstName) {
     errors.firstName = "Name required";
   }
