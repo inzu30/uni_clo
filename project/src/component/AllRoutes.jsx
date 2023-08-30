@@ -21,4 +21,4 @@ const AllRoutes = () => {
   )
 }
 
-export default AllRoutes
+export default AllRoutes;
