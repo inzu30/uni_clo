@@ -66,7 +66,7 @@ const Login = () => {
 
   return (
     <div className="outerBox">
-      <Box className="outerBoxs" width="100%">
+      <Box className="outerBoxs">
         <Card className="loginBox">
           <h2>My Account</h2>
           <form className="form">
@@ -123,6 +123,7 @@ const Login = () => {
         </Card>
                 
         <Box className="register" padding="15px" w="30%">
+          <Box className="text">
           <b>New customers</b>
           <p>Set up an account with us and you will be able to:</p>
           <br />
@@ -140,6 +141,7 @@ const Login = () => {
             <SpinnerIcon w={6} h={6} />
             <span> Set your size and monogramming preferences</span>
           </Box>
+        </Box>
           <Button
             className="buttonR"
             color="white"
