@@ -5,6 +5,7 @@ import Login from'../component/Login'
 import Register from '../component/Register'
 import Filter from './filter'
 import ProductCard from './ProductCard/ProductCard'
+import Payment from './Payment'
 const AllRoutes = () => {
   return (
     <Routes>
@@ -13,6 +14,7 @@ const AllRoutes = () => {
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/tempo" element={<Filter/>}></Route>
         <Route path="/product" element={<ProductCard/>}></Route>
+        <Route path="/payment" element={<Payment/>}></Route>
     </Routes>
   )
 }

@@ -1,18 +1,41 @@
-.content{
+.App .content{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: yellow;
+  width: 400px;
+  padding-right: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex; */
+  /* padding-top: 200px; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* color: yellow; */
 }
 .con{
   color: white;
   font-size: 80px;
 }
-button{
-  border-style: solid;
-  border-color: black;
+.App button{
+  /* position: absolute; */
+  border: 2px solid;
+  background-color: white;
+  color: black;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0; */
+  cursor: pointer;
+}
+.App .Home{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.content{
+  color: yellow;
 }
