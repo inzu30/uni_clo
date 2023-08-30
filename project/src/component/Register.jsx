@@ -4,6 +4,7 @@ import showPwdImg from "./show-password.svg";
 import hidePwdImg from "./hide-password.svg";
 import { useState } from "react";
 import ValidationR from "./ValidationR";
+import {useNavigate} from 'react-router-dom'
 import{  
 InputGroup,
   Box,
@@ -11,7 +12,7 @@ InputGroup,
   Button,
   Spacer,
   Img,
-  Select,
+  Select
 } from "@chakra-ui/react";
 
 const Register = () => {
@@ -25,12 +26,12 @@ const Register = () => {
      firstName:"",
      phone:"",
      lastName:""
-
    });
 
    async function postData()
     {
-      let res = await fetch("http://localhost:8080/user", {
+      console.log("in post")
+      let res = await fetch("http://localhost:3000/user", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -39,6 +40,7 @@ const Register = () => {
       });
       let data =await res.json();
       console.log(data)
+      alert("Signed In")
     }
     function handleChange(e) {
       console.log("asdad");
@@ -49,19 +51,29 @@ const Register = () => {
       e.preventDefault();
       console.log("run");
       setErrors(ValidationR({ ...values, password: pwd }));
-      postData()
+      if (Object.keys(errors).length === 0) {
+        console.log("Object");
+        {postData();}
+      }
     }
+
+    const nav = useNavigate();
+
+  function handleNavigate() {
+    nav("/login");
+  }
 
   return (
     <div className="mainDiv">
-      <Box className="register" margin="5%">
+      <Box className="register" size="40%">
         <Spacer className="bigger">Create account</Spacer>
         <br />
-        <Select className="select"
+        <Select
+          className="selectoption"
           borderRadius="none"
           variant="outline"
           placeholder="CHOOSE A TITLE"
-          w="50vw"
+
           borderColor="darkblue"
         >
           <option value="MR">MR</option>
@@ -72,7 +84,9 @@ const Register = () => {
           <option value="">OTHER</option>
         </Select>
         <form className="form">
-          <label style={{ fontSize: "150%" }}>First name</label>
+          <label style={{ fontSize: "130%", textAlign: "left" }}>
+            First name
+          </label>
           <Input
             type="text"
             placeholder="First name"
@@ -84,7 +98,7 @@ const Register = () => {
             <p style={{ color: "red", fontSize: "10px" }}>{errors.firstName}</p>
           )}
 
-          <label style={{ fontSize: "150%" }}>Last name</label>
+          <label style={{ fontSize: "130%" }}>Last name</label>
           <Input
             type="text"
             placeholder="Last name"
@@ -96,7 +110,7 @@ const Register = () => {
             <p style={{ color: "red", fontSize: "10px" }}>{errors.lastName}</p>
           )}
 
-          <label style={{ fontSize: "150%" }}>Email Address</label>
+          <label style={{ fontSize: "130%" }}>Email Address</label>
           <Input
             type="email"
             placeholder="Email Address"
@@ -108,7 +122,7 @@ const Register = () => {
             <p style={{ color: "red", fontSize: "10px" }}>{errors.email}</p>
           )}
 
-          <label style={{ fontSize: "150%" }}>Phone Number</label>
+          <label style={{ fontSize: "130%" }}>Phone Number</label>
           <Input
             type="number"
             placeholder="Phone number"
@@ -120,7 +134,7 @@ const Register = () => {
             <p style={{ color: "red", fontSize: "10px" }}>{errors.phone}</p>
           )}
 
-          <label style={{ fontSize: "150%" }}>Password</label>
+          <label style={{ fontSize: "130%" }}>Password</label>
           <br />
           <div className="password">
             <Input
@@ -161,7 +175,7 @@ const Register = () => {
         <p className="bigger">
           <i>Have an Account?</i>
         </p>
-        <br/>
+        <br />
         <Button
           className="button"
           color="white"
@@ -171,6 +185,7 @@ const Register = () => {
           w="90%"
           borderRadius="none"
           justifyContent="center"
+          onClick={handleNavigate}
         >
           LOG IN
         </Button>

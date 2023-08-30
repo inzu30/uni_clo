@@ -7,7 +7,7 @@ input
     margin: 2%;
     width :100%;
     height: 30px;
-    border : 1px solid black;
+    border : 1px solid rgb(19, 5, 5);
 }
 input:active{
  border-color:rgb(31, 31, 236)
@@ -23,7 +23,7 @@ input:active{
 .tologin
 { 
     align-content: center;
-    justify-content: center;
+    align-self: center;
 }
 .mainDiv
 {
@@ -33,7 +33,25 @@ input:active{
 {
     width:60%
 }
-.select
+.selectoption
 {
-    margin: 3%;
+    margin: 0%;
+}
+label{
+    text-align: left;
+    align-content: flex-start;
+}
+@media (max-width :700px)
+{
+    .mainDiv {
+        display: inline;
+    }
+    .register {
+    width: 80%; /* Adjust the width for smaller screens */
+    margin: 0 auto; /* Center the box horizontally */
+  }
+
+  .selectoption {
+    width: 100%; /* Make the select element width 100% */
+  }
 }

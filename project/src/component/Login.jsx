@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import Validation from "./Validation";
 import { Box, Button, Card, Input, Spacer } from "@chakra-ui/react";
@@ -48,7 +49,7 @@ const Login = () => {
         {
           alert("Wrong password")
         }
-        else
+        else if(el.email!==values.email && el.password !== values.password)
         {
           alert("Email is not registered,you can create a new")
         }
@@ -56,11 +57,18 @@ const Login = () => {
       console.log(errors);
     }
   }, [errors]);
+
+  const nav = useNavigate();
+
+  function handleNavigate() {
+    nav("/register");
+  };
+
   return (
     <div className="outerBox">
       <Box className="outerBoxs" width="100%">
-        <Card className="loginBox" width="40%">
-          <p>My Account</p>
+        <Card className="loginBox">
+          <h2>My Account</h2>
           <form className="form">
             <label style={{ textAlign: "left" }}>Email</label>
             <br />
@@ -108,12 +116,13 @@ const Login = () => {
             >
               LOG IN
             </Button>
-            <span>New here?</span>
+            <h4>New here?</h4>
             <br />
             <a href="#">Create an account</a>
           </form>
         </Card>
-        <Box padding="15px" w="30%">
+                
+        <Box className="register" padding="15px" w="30%">
           <b>New customers</b>
           <p>Set up an account with us and you will be able to:</p>
           <br />
@@ -131,6 +140,17 @@ const Login = () => {
             <SpinnerIcon w={6} h={6} />
             <span> Set your size and monogramming preferences</span>
           </Box>
+          <Button
+            className="buttonR"
+            color="white"
+            colorScheme="facebook"
+            size="md"
+            variant="solid"
+            borderRadius="none"
+            onClick={handleNavigate}
+          >
+            CREATE AN ACCOUNT NOW
+          </Button>
         </Box>
       </Box>
     </div>
