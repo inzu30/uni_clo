@@ -7,6 +7,7 @@ import Filter from './filter'
 import ProductCard from './ProductCard/ProductCard'
 import Payment from './Payment'
 import CartPage from './cartPage'
+
 const AllRoutes = () => {
   return (
     <Routes>
@@ -20,5 +21,4 @@ const AllRoutes = () => {
     </Routes>
   )
 }
-
-export default AllRoutes
+export default AllRoutes;

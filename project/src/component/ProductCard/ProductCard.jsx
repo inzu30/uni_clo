@@ -32,7 +32,7 @@ const ProductCard = () => {
 
   const [colorList, setColorList] = useState([
     { name: "crimson", isSelected: false },
-    { name: "white", isSelected: false },
+    { name: "grey", isSelected: false },
     { name: "green", isSelected: false },
     { name: "black", isSelected: false },
     { name: "teal", isSelected: false },
@@ -42,7 +42,7 @@ const ProductCard = () => {
     { name: "brown", isSelected: false },
     { name: "olive", isSelected: false },
     { name: "tan", isSelected: false },
-    { name: "gray", isSelected: false },
+    { name: "offwhite", isSelected: false },
   ]);
 
   useEffect(() => {
@@ -119,9 +119,11 @@ const ProductCard = () => {
         <div>
           <p className="text">PRODUCT DETAILS</p>
           {/* <p className="product-category">{category}</p> */}
-          <span style={{ fontWeight: "bold", fontSize: "0.9rem" }}>
+          <p>
+            <span style={{ fontWeight: "bold", fontSize: "0.9rem" }}>
             6 MONTH QUALITY GUARANTEE
           </span>
+          </p>
           <p className="text">Product code: TRC0270TAN</p>
           <p className="product-description text">{product.details}</p>
           <Button

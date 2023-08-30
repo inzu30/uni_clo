@@ -1,13 +1,13 @@
 .product-card {
-  display: flex;
+  /* display: flex; */
   padding: 16px;
   width: 60%;
   margin: 10px auto;
 }
 
 .product-image {
-  width: 90%;
-  height: 450px;
+  width: auto;
+  height: auto;
   margin-right: 20px;
   object-fit: contain;
 }
@@ -23,8 +23,10 @@
 }
 
 .product-price {
-  font-size: 0.95rem;
+  font-size: 1.9rem;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
 }
 
 .product-color {
@@ -49,6 +51,8 @@
 }
 
 .text {
+  display: flex;
+  flex-direction: row;
   font-size: 0.9rem;
   font-weight: 100;
 }
@@ -67,7 +71,7 @@
 .empty {
   color: #ccc;
 }
-@media (max-width:750px)
+@media (max-width:747px)
 {
   .product-card {
   display: flex;
@@ -76,6 +80,7 @@
   }
   .product-image{
     display: inline;
-    width: 80%;
+    width: 100%;
+    position: fixed;
   }
 }

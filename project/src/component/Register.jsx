@@ -65,7 +65,7 @@ const Register = () => {
 
   return (
     <div className="mainDiv">
-      <Box className="register" size="40%">
+      <Box className="register" size="100%">
         <Spacer className="bigger">Create account</Spacer>
         <br />
         <Select
