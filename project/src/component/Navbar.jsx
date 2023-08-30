@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
-import Homepage from "../pages/homepage";
+import Home from "../pages/Home";
 
 function Navbar() {
 	const navRef = useRef();
@@ -16,7 +16,7 @@ function Navbar() {
 		<header>
 			<h3>LOGO</h3>
 			<nav ref={navRef}>
-				<a href="/Homepage">SHIRTS</a>
+				<a href="/Home">SHIRTS</a>
 				<a href="/#">POLOS</a>
 				<a href="/#">SUITS</a>
 				<a href="/#">PANTS</a>
