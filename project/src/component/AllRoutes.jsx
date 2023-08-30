@@ -6,6 +6,7 @@ import Register from '../component/Register'
 import Filter from './filter'
 import ProductCard from './ProductCard/ProductCard'
 import Payment from './Payment'
+import Cart from './Cart'
 const AllRoutes = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ const AllRoutes = () => {
         <Route path="/products/:category" element={<Filter/>}></Route>
         <Route path="products/:category/:id" element={<ProductCard/>}></Route>
         <Route path="/payment" element={<Payment/>}></Route>
+        <Route path="/cart" element={<Cart/>}></Route>
     </Routes>
   )
 }
