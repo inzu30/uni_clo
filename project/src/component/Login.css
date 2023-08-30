@@ -2,16 +2,19 @@
   border: 1px solid rgb(255, 255, 255);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 25px;
+  margin: 7%;
 }
 .loginBox {
-  size: 65%;
+  width : 50%;
   font-style: oblique;
   border: 1px solid rgb(255, 255, 255);
   text-align: left;
   padding: 5px;
-  margin-right: 7%;
+  margin-right: 10%;
+}
+.text
+{
+  margin-left: 5%;
 }
 .register {
     width: 50%;
