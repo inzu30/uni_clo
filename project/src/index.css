@@ -4,6 +4,8 @@
   height: 100%;
   top: 0;
   display: flex;
+  padding-top: 200px;
+  padding-right: 300px;
   flex-direction: column;
   align-items: center;
   color: yellow;
