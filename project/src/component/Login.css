@@ -2,10 +2,9 @@
   border: 1px solid rgb(255, 255, 255);
   display: flex;
   flex-wrap: wrap;
-  margin: 7%;
 }
 .loginBox {
-  width : 50%;
+  width : 400px ;
   font-style: oblique;
   border: 1px solid rgb(255, 255, 255);
   text-align: left;
@@ -14,7 +13,8 @@
 }
 .text
 {
-  margin-left: 5%;
+  align-content: center;
+  justify-content: center;
 }
 .register {
     width: 50%;
@@ -30,9 +30,12 @@
     justify-self:center;
   }
   .register
-  {
-    width: 100%;
+  { 
+    display: contents;
     align-content: center;
     justify-self: center;
+  }
+  .text{
+    display: inline-block;
   }
 }
