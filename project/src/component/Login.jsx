@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import Validation from "./Validation";
 import { Box, Button, Card, Input, Spacer } from "@chakra-ui/react";
@@ -56,6 +57,13 @@ const Login = () => {
       console.log(errors);
     }
   }, [errors]);
+
+  const nav = useNavigate();
+
+  function handleNavigate() {
+    nav("/register");
+  };
+
   return (
     <div className="outerBox">
       <Box className="outerBoxs" width="100%">
@@ -113,7 +121,8 @@ const Login = () => {
             <a href="#">Create an account</a>
           </form>
         </Card>
-        <Box className="register"padding="15px" w="30%">
+                
+        <Box className="register" padding="15px" w="30%">
           <b>New customers</b>
           <p>Set up an account with us and you will be able to:</p>
           <br />
@@ -131,6 +140,17 @@ const Login = () => {
             <SpinnerIcon w={6} h={6} />
             <span> Set your size and monogramming preferences</span>
           </Box>
+          <Button
+            className="buttonR"
+            color="white"
+            colorScheme="facebook"
+            size="md"
+            variant="solid"
+            borderRadius="none"
+            onClick={handleNavigate}
+          >
+            CREATE AN ACCOUNT NOW
+          </Button>
         </Box>
       </Box>
     </div>

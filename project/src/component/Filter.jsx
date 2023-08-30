@@ -1,6 +1,7 @@
 import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import './Filter.css'
+import {useNavigate} from 'react-router-dom'
 
 const Filter = () => {
   const [product, setProduct] = useState([]);
@@ -53,12 +54,13 @@ const Filter = () => {
       sortProducts(selectedOption);
     }
   }
+  const navigate = useNavigate();
 
   return (
     <div>
       <div className="selectContainer">
         <select onChange={handleSortChange}>
-          <option value="default">Default</option>
+          <option value="default">Sort By-</option>
           <option value="asc">Price: Low to High</option>
           <option value="desc">Price: High to Low</option>
           <option value="ratingAsc">Rating: Low to High</option>
@@ -68,17 +70,23 @@ const Filter = () => {
       <br />
       <div className="mainDiv">
         {filterProduct.map((el) => (
-          <Card className="card" maxW="xs" key={el.id}>
-            <CardBody>
-              <Image src={el.image} alt="Product Image" borderRadius="lg" />
-              <Stack mt="6" spacing="3">
-                <Heading size="md">{el.title}</Heading>
-                <Text color="blue.600" fontSize="2xl">
-                  ${el.price}
-                </Text>
-              </Stack>
-            </CardBody>
-          </Card>
+          <div
+            className="productdiv"
+            key={el.id}
+            onClick={() => navigate(`/product/${el.id}`)} // Navigate onClick
+          >
+            <Card className="card" maxW="xs" key={el.id}>
+              <CardBody>
+                <Image src={el.image} alt="Product Image" borderRadius="lg" />
+                <Stack mt="6" spacing="3">
+                  <Heading size="md">{el.title}</Heading>
+                  <Text color="blue.600" fontSize="2xl">
+                    ${el.price}
+                  </Text>
+                </Stack>
+              </CardBody>
+            </Card>
+          </div>
         ))}
       </div>
     </div>
