@@ -1,12 +1,13 @@
 import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import './Filter.css'
-import {useNavigate} from 'react-router-dom'
+import "./Filter.css";
+import { useNavigate, useParams,Link } from "react-router-dom";
 
 const Filter = () => {
   const [product, setProduct] = useState([]);
   const [filterProduct, setFilterProduct] = useState([]);
-
+  const { category } = useParams();
+  console.log(category);
   async function fetchData() {
     console.log("fetchdata");
     let res = await fetch("http://localhost:3000/products");
@@ -25,7 +26,7 @@ const Filter = () => {
 
   function filterCheck() {
     if (product) {
-      const filteredProducts = product.filter((el) => el.catagory === "SHIRTS");
+      const filteredProducts = product.filter((el) => el.catagory === category);
       console.log(filteredProducts);
       setFilterProduct(filteredProducts);
     }
@@ -70,23 +71,21 @@ const Filter = () => {
       <br />
       <div className="mainDiv">
         {filterProduct.map((el) => (
-          <div
-            className="productdiv"
-            key={el.id}
-            onClick={() => navigate(`/product/${el.id}`)} // Navigate onClick
-          >
-            <Card className="card" maxW="xs" key={el.id}>
-              <CardBody>
-                <Image src={el.image} alt="Product Image" borderRadius="lg" />
-                <Stack mt="6" spacing="3">
-                  <Heading size="md">{el.title}</Heading>
-                  <Text color="blue.600" fontSize="2xl">
-                    ${el.price}
-                  </Text>
-                </Stack>
-              </CardBody>
-            </Card>
-          </div>
+          <Link to={`/products/${category}/${el.id}`} key={el.id}>
+            <div className="productdiv">
+              <Card className="card" maxW="xs" key={el.id}>
+                <CardBody>
+                  <Image src={el.image} alt="Product Image" borderRadius="lg" />
+                  <Stack mt="6" spacing="3">
+                    <Heading size="md">{el.title}</Heading>
+                    <Text color="blue.600" fontSize="2xl">
+                      ${el.price}
+                    </Text>
+                  </Stack>
+                </CardBody>
+              </Card>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

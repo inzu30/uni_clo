@@ -2,17 +2,25 @@ import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 import Color from "../Color/Color";
 import { Button } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
+const ProductCard = () => {
+  const { id } = useParams();
+  console.log(id);
 
-const ProductCard = ({
-  image,
-  title,
-  price,
-  color,
-  rating,
-  category,
-  details,
-}) => {
-  const roundedRating = Math.round(parseFloat(rating));
+  const [product, setProduct] = useState([]);
+
+  async function fetchData() {
+    console.log("fetchdata");
+    let res = await fetch(`http://localhost:3000/products/${id}`);
+    let data = await res.json();
+    console.log(data);
+    setProduct(data);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  const roundedRating = Math.round(parseFloat(product.rating));
   const stars = Array.from({ length: roundedRating }, (_, index) => (
     <span
       key={index}
@@ -24,7 +32,7 @@ const ProductCard = ({
 
   const [colorList, setColorList] = useState([
     { name: "crimson", isSelected: false },
-    { name: "brown", isSelected: false },
+    { name: "white", isSelected: false },
     { name: "green", isSelected: false },
     { name: "black", isSelected: false },
     { name: "teal", isSelected: false },
@@ -38,7 +46,7 @@ const ProductCard = ({
   ]);
 
   useEffect(() => {
-    const colorIndex = colorList.findIndex((c) => c.name === color);
+    const colorIndex = colorList.findIndex((c) => c.name === product.color);
 
     if (colorIndex !== -1) {
       const updatedColors = colorList.map((c, index) =>
@@ -59,9 +67,9 @@ const ProductCard = ({
 
   return (
     <div className="product-card">
-      <img src={image} alt={title} className="product-image" />
+      <img src={product.image} alt={product.title} className="product-image" />
       <div className="product-details">
-        <h2 className="product-title">{title}</h2>
+        <h2 className="product-title">{product.title}</h2>
         <div
           style={{
             display: "flex",
@@ -69,10 +77,10 @@ const ProductCard = ({
             justifyContent: "space-between",
           }}
         >
-          <p className="product-price">${price}</p>
+          <p className="product-price">$ {product.price}</p>
           <p className="product-rating">
             {" "}
-            ({rating}/5) {stars}
+            ({product.rating}/5) {stars}
           </p>
         </div>
         <hr />
@@ -84,7 +92,7 @@ const ProductCard = ({
           <span style={{ fontWeight: "bold", marginRight: "5px" }}>
             1.Color{" "}
           </span>
-          {colorList.find((c) => c.isSelected)?.name.toUpperCase()}
+          {product.color}
         </p>
         <Color colorList={colorList} handleColorClick={handleColorClick} />
         <hr style={{ marginTop: "30px" }} />
@@ -95,8 +103,16 @@ const ProductCard = ({
             6 MONTH QUALITY GUARANTEE
           </span>
           <p className="text">Product code: TRC0270TAN</p>
-          <p className="product-description text">{details}</p>
-          <Button variant="solid" borderRadius="none" colorScheme="blue" size="md" className="addToCart">Add to card</Button>
+          <p className="product-description text">{product.details}</p>
+          <Button
+            variant="solid"
+            borderRadius="none"
+            colorScheme="blue"
+            size="md"
+            className="addToCart"
+          >
+            Add to Cart
+          </Button>
         </div>
       </div>
     </div>
