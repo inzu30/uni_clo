@@ -48,7 +48,7 @@ const Login = () => {
         {
           alert("Wrong password")
         }
-        else
+        else if(el.email!==values.email && el.password !== values.password)
         {
           alert("Email is not registered,you can create a new")
         }
@@ -60,7 +60,7 @@ const Login = () => {
     <div className="outerBox">
       <Box className="outerBoxs" width="100%">
         <Card className="loginBox">
-          <p>My Account</p>
+          <h2>My Account</h2>
           <form className="form">
             <label style={{ textAlign: "left" }}>Email</label>
             <br />
@@ -108,7 +108,7 @@ const Login = () => {
             >
               LOG IN
             </Button>
-            <span>New here?</span>
+            <h4>New here?</h4>
             <br />
             <a href="#">Create an account</a>
           </form>

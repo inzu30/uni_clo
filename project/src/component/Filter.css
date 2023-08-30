@@ -1,0 +1,26 @@
+/* .mainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+} */
+.mainDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+}
+.selectContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selectContainer select {
+  padding: 5px 10px;
+  font-size: 16px;
+}
