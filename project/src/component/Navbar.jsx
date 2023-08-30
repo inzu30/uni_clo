@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
+import { Button } from "@chakra-ui/react";
 
 
 function Navbar() {
@@ -14,16 +15,15 @@ function Navbar() {
 
 	return (
 		<header>
-			<h3>LOGO</h3>
+			<h1>UNI_CLO</h1>
 			<nav ref={navRef}>
-				<a href="/Homepage">SHIRTS</a>
-				<a href="/#">POLOS</a>
-				<a href="/#">SUITS</a>
-				<a href="/#">PANTS</a>
-        <a href="/#">SWEATERS</a>
-				<a href="/#">JACKETS & COATS</a>
-				<a href="/#">SHOES</a>
-				<a href="/#">ACCESSORIES</a>
+			<Button>SHIRTS</Button>
+            <Button>POLOS</Button>
+            <Button>SUITS</Button>
+            <Button>PANTS</Button>
+            <Button>SWEATERS</Button>
+            <Button>JACKETS&COATS</Button>
+            <Button>ACCESSORIES</Button>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

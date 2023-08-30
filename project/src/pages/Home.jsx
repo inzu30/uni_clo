@@ -1,10 +1,12 @@
 import React from 'react'
 import project from '../assets/project.mp4';
-
-
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer'
 const Home = () => {
   return (
-        <div className="Home">
+    <div>
+       <Navbar/>
+      <div className="Home">
         <video src={project} autoPlay muted loop/>
         <div className="content">
             <div className="con"> <h1>WORK WONDERS</h1> </div>
@@ -14,6 +16,8 @@ const Home = () => {
             <button>Shop New Shirts</button>
         </div>
         </div>
+        <Footer/>
+    </div>
   )
 }
 

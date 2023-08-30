@@ -7,7 +7,7 @@
 }
 
 :root {
-	--mainColor: white;
+	--mainColor: rgb(255, 255, 255);
 	--mainColorLight: #ebefff;
 	--secondaryColor: #db2b39;
 	--textColor: rgb(100, 97, 97)	;
