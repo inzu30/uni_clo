@@ -2,6 +2,7 @@ import React from 'react'
 import project from '../assets/project.mp4';
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer'
+import Grid from '../component/Grid';
 const Home = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Home = () => {
             <button>Shop New Shirts</button>
         </div>
         </div>
+        <Grid/>
         <Footer/>
     </div>
   )
