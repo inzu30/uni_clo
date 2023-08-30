@@ -4,6 +4,7 @@ import showPwdImg from "./show-password.svg";
 import hidePwdImg from "./hide-password.svg";
 import { useState } from "react";
 import ValidationR from "./ValidationR";
+import {useNavigate} from 'react-router-dom'
 import{  
 InputGroup,
   Box,
@@ -56,17 +57,23 @@ const Register = () => {
       }
     }
 
+    const nav = useNavigate();
+
+  function handleNavigate() {
+    nav("/login");
+  }
+
   return (
     <div className="mainDiv">
       <Box className="register" size="40%">
         <Spacer className="bigger">Create account</Spacer>
         <br />
         <Select
-          className="select"
+          className="selectoption"
           borderRadius="none"
           variant="outline"
           placeholder="CHOOSE A TITLE"
-          w="50vw"
+
           borderColor="darkblue"
         >
           <option value="MR">MR</option>
@@ -178,6 +185,7 @@ const Register = () => {
           w="90%"
           borderRadius="none"
           justifyContent="center"
+          onClick={handleNavigate}
         >
           LOG IN
         </Button>

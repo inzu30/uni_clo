@@ -33,7 +33,7 @@ input:active{
 {
     width:60%
 }
-.select
+.selectoption
 {
     margin: 0%;
 }
@@ -46,8 +46,12 @@ label{
     .mainDiv {
         display: inline;
     }
-    .register
-    {
-        width :100%;
-    }
+    .register {
+    width: 80%; /* Adjust the width for smaller screens */
+    margin: 0 auto; /* Center the box horizontally */
+  }
+
+  .selectoption {
+    width: 100%; /* Make the select element width 100% */
+  }
 }
