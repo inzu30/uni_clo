@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import '../component/CartPage.css'
-import {Card, Box,Image,Button} from "@chakra-ui/react";
+import {Card, Box,Image,Button,Flex,Spacer,Text,Divider} from "@chakra-ui/react";
 import {useNavigate} from 'react-router-dom';
 
 function CartPage() {
@@ -48,9 +48,26 @@ const calculateTotal = () => {
 
   return (
     <div>
-        <Button alignSelf="flex-start" onClick={handleNavigate}>HOME</Button>
+      <Box>
+    <Flex>
+    <Box p='18' bg='white' fontSize="large" fontWeight="bold" fontFamily="heading">
+       <h1>BAG</h1>
+     </Box>
+     <Spacer />
+     <Box p='1' bg='white'>
+        <Flex>
+            <Box>
+              <img src="padlock.svg" alt="error" />
+            <Text fontSize="2xs">Shopping is secure <br/>with UNI_CLO.</Text>
+            </Box>
+           </Flex>
+    </Box>
+</Flex>
+    </Box>
+    <Divider/>
+
     <div className="cart-page">
-      <h2>Your Cart</h2>
+    
       <div className="cart-items">
         {cartItems.length === 0 ? (
             <b>Your cart is empty.</b>
@@ -80,10 +97,10 @@ const calculateTotal = () => {
             variant="solid"
             w="100%"
             borderRadius="none"
-            onClick={handleNavigatetopayment}>Total: ${calculateTotal()}</Button>
+            onClick={handleNavigatetopayment}>Proceed To Pay:<Spacer/
+            >Total: ${calculateTotal()}</Button>
         </Box>
       )}
-     
     </div>
       </div>
   );
