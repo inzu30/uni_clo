@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 import Color from "../Color/Color";
 import { Button } from "@chakra-ui/react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 const ProductCard = () => {
   const { id } = useParams();
   console.log(id);
@@ -65,6 +65,26 @@ const ProductCard = () => {
     setColorList(updatedColors);
   };
 
+  const handleAddToCart = () => {
+    const cartItem = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+    };
+
+    const existingCartItems =
+      JSON.parse(localStorage.getItem("cartItems")) || [];
+    const updatedCartItems = [...existingCartItems, cartItem];
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+  };
+
+  const nav = useNavigate();
+
+  function handleNavigate() {
+    nav("/cart");
+  }
+
   return (
     <div className="product-card">
       <img src={product.image} alt={product.title} className="product-image" />
@@ -112,8 +132,20 @@ const ProductCard = () => {
             colorScheme="blue"
             size="md"
             className="addToCart"
+            onClick={handleAddToCart}
           >
             Add to Cart
+          </Button>
+          <Button
+          margin="10px"
+            variant="solid"
+            borderRadius="none"
+            colorScheme="blue"
+            size="md"
+            className="addToCart"
+            onClick={handleNavigate}
+          >
+            Go To Cart
           </Button>
         </div>
       </div>
