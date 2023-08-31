@@ -1,10 +1,8 @@
-import React from "react";
-import project from "../assets/project.mp4";
-import Navbar from "../component/Navbar";
-import { useNavigate } from "react-router-dom";
-// import Footer from '../component/Footer';
-import Grid from "../component/Grid";
-import { Flex } from "@chakra-ui/react";
+import React from 'react'
+import project from '../assets/project.mp4';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
+import Grid from '../component/Grid';
 const Home = () => {
   const nav = useNavigate();
 
@@ -42,9 +40,9 @@ const Home = () => {
           <br />
         </div>
       </div>
-      {/* <Footer /> */}
-      <Grid />
-      {/* <Footer/> */}
+      
+        <Grid/>
+        <Footer/>
     </div>
   );
 };
