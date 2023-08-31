@@ -40,8 +40,7 @@ const Home = () => {
           <br />
           <br />
         </div>
-      </div>
-      <Footer />
+        </div>
         <Grid/>
         <Card2/>
         <Footer/>
