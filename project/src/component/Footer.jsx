@@ -13,11 +13,9 @@ export default function Footer() {
               <p>We will keep you posted on great offers and new products</p>
             </p>
           </MDBCol>
-
-          <MDBCol size='3' className='mb-4 mb-md-0'>
+          <MDBCol size='3' className='mb-4 mb-md-0' >
             <MDBInput type='text' id='form5Example2' label='Email address' />
           </MDBCol>
-
           <MDBCol size='auto' className='mb-4 mb-md-0'>
             <MDBBtn><MDBIcon fas icon="chevron-right" /></MDBBtn>
           </MDBCol>
