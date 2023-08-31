@@ -2,6 +2,9 @@ import { Card, CardHeader, CardBody, CardFooter ,SimpleGrid,Heading,Button,Text}
 import firstimg from "../assets/firstimg.jpg"
 import Secimg from "../assets/Secimg.jpg"
 import thirimg from "../assets/thirimg.jpg"
+import fourimg from "../assets/fourimg.jpg"
+import fiveimg from "../assets/fiveimg.jpg"
+import siximg from "../assets/siximg.jpg"
 import React from 'react'
 
 export default function Grid() {
@@ -29,6 +32,27 @@ export default function Grid() {
     </CardBody>
     
   </Card>
+  <Card>
+   
+   <CardBody>
+       <img src={fourimg} alt="" />
+   </CardBody>
+   
+ </Card>
+ <Card>
+   
+   <CardBody>
+       <img src={fiveimg} alt="" />
+   </CardBody>
+   
+ </Card>
+ <Card>
+   
+   <CardBody>
+       <img src={siximg} alt="" />
+   </CardBody>
+   
+ </Card>
 </SimpleGrid>
     </div>
   )
