@@ -4,6 +4,7 @@ import Color from "../Color/Color";
 import { Button } from "@chakra-ui/react";
 import { useParams, useNavigate } from "react-router-dom";
 const ProductCard = () => {
+  
   const { id } = useParams();
   console.log(id);
 
@@ -20,6 +21,7 @@ const ProductCard = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
   const roundedRating = Math.round(parseFloat(product.rating));
   const stars = Array.from({ length: roundedRating }, (_, index) => (
     <span
@@ -77,6 +79,7 @@ const ProductCard = () => {
       JSON.parse(localStorage.getItem("cartItems")) || [];
     const updatedCartItems = [...existingCartItems, cartItem];
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+    alert("ADDED");
   };
 
   const nav = useNavigate();

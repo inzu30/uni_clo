@@ -1,16 +1,34 @@
-import React from 'react'
-import project from '../assets/project.mp4';
-import Navbar from '../component/Navbar';
-import Footer from '../component/Footer;
-import Grid from '../component/Grid';
+import React from "react";
+import project from "../assets/project.mp4";
+import Navbar from "../component/Navbar";
+import { useNavigate } from "react-router-dom";
+// import Footer from '../component/Footer';
+import Grid from "../component/Grid";
+import { Flex } from "@chakra-ui/react";
 const Home = () => {
+  const nav = useNavigate();
+
+  function handlelogin() {
+    nav("/login");
+  }
+  function handlecart() {
+    nav("/cart");
+  }
+  function handleregister() {
+    nav("/register");
+  }
 
   return (
     <div>
       <Navbar />
+      <div style={{ display: Flex }}>
+        <i onClick={handlecart} class="fas fa-bag-shopping"></i>
+        <i class="fas fa-user" onClick={handlelogin}></i>
+        <i class="fas fa-user-plus" onClick={handleregister}></i>
+      </div>
       <div className="Home">
         <video src={project} autoPlay muted loop />
-        <div className="content">
+        <div className="content" style={{ color: "navy" }}>
           <div className="con">
             {" "}
             <h1>WORK WONDERS</h1>{" "}
@@ -19,13 +37,16 @@ const Home = () => {
           <h2>SAVE UP TO $215</h2>
           <button>Shop New Collection</button>
           <button>Shop New Shirts</button>
+          <br />
+          <br />
+          <br />
         </div>
       </div>
-      <Footer />
-        <Grid/>
-        <Footer/>
+      {/* <Footer /> */}
+      <Grid />
+      {/* <Footer/> */}
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
