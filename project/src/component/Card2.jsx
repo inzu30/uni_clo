@@ -4,6 +4,7 @@ import sevimg from "../assets/sevimg.jpg"
 import eigimg from "../assets/eigimg.jpg"
 import nineimg from "../assets/nineimg.jpg"
 import tenimg from "../assets/tenimg.jpg"
+import { Link } from 'react-router-dom'
 function Card2() {
   return (
     <div>
@@ -53,7 +54,9 @@ function Card2() {
    <Text><p>Give your swing some extra power in our slick golf attire.Our range of versatile separates has been designed to effortlessly take you from the course to the ckubhouse </p></Text>
   </CardBody>
   <CardFooter>
-    <Button colorScheme='blue'>Discover More</Button>
+    <Link to="/products/POLOS">
+       <Button colorScheme='blue'>Discover More</Button>
+       </Link>
   </CardFooter>
 </Card>
     </div>

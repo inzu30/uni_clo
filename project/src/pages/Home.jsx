@@ -1,17 +1,11 @@
-import React from 'react'
-import project from '../assets/project.mp4';
 import Navbar from '../component/Navbar';
-import Footer from '../component/Footer';
 import Grid from '../component/Grid';
 import Card2 from '../component/Card2';
-import { useNavigate } from 'react-router-dom';
 import Editorial from '../Editorial/Editorial';
 import elevenimg from "../assets/elevenimg.jpg";
-import newimg from "../assets/newimg.jpg";
 import Image from '../component/Image';
 import Video from '../component/Video';
 const Home = () => {
-  const nav = useNavigate();
 
   // function handlelogin() {
   //   nav("/login");
