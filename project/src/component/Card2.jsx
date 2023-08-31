@@ -7,6 +7,7 @@ import tenimg from "../assets/tenimg.jpg"
 function Card2() {
   return (
     <div>
+        <Text><h1>OUR NEW ARRIVALS</h1></Text>
         <Card align='center'>
   <CardHeader>
     <img src={sevimg} alt="" />
