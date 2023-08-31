@@ -7,6 +7,7 @@ import Filter from './filter'
 import ProductCard from './ProductCard/ProductCard'
 import Payment from './Payment'
 import CartPage from './cartPage'
+import AdminPanel from './AdminPanel'
 
 const AllRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AllRoutes = () => {
         <Route path="products/:category/:id" element={<ProductCard/>}></Route>
         <Route path="/payment" element={<Payment/>}></Route>
         <Route path="/cart" element={<CartPage/>}></Route>
+        <Route path = "/admin" element ={<AdminPanel/>}></Route>
     </Routes>
   )
 }

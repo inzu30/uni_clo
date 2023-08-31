@@ -36,25 +36,21 @@ const Login = () => {
 
   useEffect(() => {
     if (
-      Object.keys(errors).length == 0 &&
+      Object.keys(errors).length === 0 &&
       values.email !== "" &&
       values.password !== ""
     ) {
-      data.forEach((el)=>{
-        if(el.email===values.email && el.password===values.password)
-        {
+      const user = data.find((el) => el.email === values.email);
+
+      if (user) {
+        if (user.password === values.password) {
           alert("Submitted");
+        } else {
+          alert("Wrong password");
         }
-        else if(el.email===values.email && el.password !== values.password)
-        {
-          alert("Wrong password")
-        }
-        else if(el.email!==values.email && el.password !== values.password)
-        {
-          alert("Email is not registered,you can create a new")
-        }
-      })
-      console.log(errors);
+      } else {
+        alert("Email is not registered, you can create a new");
+      }
     }
   }, [errors]);
 
@@ -63,9 +59,15 @@ const Login = () => {
   function handleNavigate() {
     nav("/register");
   };
+  function handleNavigatetoAdmin()
+  {
+    nav("/admin");
+  }
+
 
   return (
     <div className="outerBox">
+      <Button alignSelf="self-start" onClick={handleNavigatetoAdmin}>Admin LOG IN</Button>
       <Box className="outerBoxs">
         <Card className="loginBox">
           <h2>My Account</h2>
