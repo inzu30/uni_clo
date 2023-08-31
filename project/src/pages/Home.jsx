@@ -19,6 +19,7 @@ const Home = () => {
 
   return (
     <div>
+    
       <Navbar />
       {/* <div style={{ display: Flex }}>
         <i onClick={handlecart} class="fas fa-bag-shopping"></i>

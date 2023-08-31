@@ -13,7 +13,6 @@ function Navbar() {
 
   return (
     <header>
-      <h1>UNI_CLO</h1>
       <nav ref={navRef}>
         <Link to="/products/SHIRTS">
           <Button>SHIRTS</Button>

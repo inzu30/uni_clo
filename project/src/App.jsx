@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import AllRoutes from './component/AllRoutes'
 import Footer from './component/Footer'
+import NavBar1 from './component/Navbar1'
 // import Navbar from './component/Navbar'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+    <NavBar1/>
     {/* <Navbar/> */}
     <AllRoutes/>
     <Footer/>
