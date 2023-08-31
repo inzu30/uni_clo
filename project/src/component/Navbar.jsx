@@ -37,7 +37,7 @@ function Navbar() {
           <Button>SHOES</Button>
         </Link>
         <Link to="/products/accessories">
-          <Button>accessories</Button>
+          <Button>ACCESSORIES</Button>
         </Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

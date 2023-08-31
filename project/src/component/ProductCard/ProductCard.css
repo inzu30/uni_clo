@@ -76,11 +76,11 @@
   .product-card {
   display: flex;
   flex-direction: column;
-
   }
   .product-image{
     display: inline;
     width: 100%;
-    position: fixed;
+    /* height: 100%;
+    position: fixed; */
   }
 }

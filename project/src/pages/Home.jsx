@@ -3,6 +3,7 @@ import project from '../assets/project.mp4';
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer'
 import Grid from '../component/Grid';
+import Card2 from '../component/Card2';
 const Home = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const Home = () => {
         </div>
         </div>
         <Grid/>
+        <Card2/>
         <Footer/>
     </div>
   )
