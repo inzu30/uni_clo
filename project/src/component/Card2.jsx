@@ -18,7 +18,9 @@ function Card2() {
    <Text><p>Make room in your wardrobe for our new and exclusive Clifton Weave</p></Text>
   </CardBody>
   <CardFooter>
+  <Link to="/products/SHIRTS">
     <Button colorScheme='blue'>Shop the Collection</Button>
+    </Link>
   </CardFooter>
 </Card>
 <Card align='center'>
@@ -30,7 +32,9 @@ function Card2() {
    <Text><p>The Official UNI_CLO INDIA Jets collection has landed! For an elevated look on football fan gear,we are representing our favorite NFL team with Oxford Shirts,Merino's Shirts and Cotton Polos</p></Text>
   </CardBody>
   <CardFooter>
+  <Link to="/products/JACKETS&COATS">
     <Button colorScheme='blue'>Discover More</Button>
+    </Link>
   </CardFooter>
 </Card>
 <Card align='center'>
@@ -42,7 +46,9 @@ function Card2() {
    <Text><p>Discover the latest seasonal looks,whether you are dresssing for the commute,a work trip or a weekend away.Stay comfy in style </p></Text>
   </CardBody>
   <CardFooter>
+  <Link to="/products/SUITS">
     <Button colorScheme='blue'>Shop Now</Button>
+    </Link>
   </CardFooter>
 </Card>
 <Card align='center'>
