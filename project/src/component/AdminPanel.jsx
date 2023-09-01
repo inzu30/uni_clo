@@ -9,6 +9,7 @@ import {
   Card,
   Input,
   Button,
+  Spacer,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -50,9 +51,10 @@ const AdminPanel = () => {
   }
 
  return (
+  <Flex>
    <Box p={4}>
      <Heading as="h1" size="xl" mb={4}>
-       Admin Panel
+       My Account
      </Heading>
      <Flex flexDirection="column" alignItems="center">
        {!loggedIn ? (
@@ -72,7 +74,7 @@ const AdminPanel = () => {
              mb={2}
            />
            <Button colorScheme="blue" onClick={handleLogin}>
-             Log In
+             check In
            </Button>
          </Box>
        ) : (
@@ -90,6 +92,7 @@ const AdminPanel = () => {
            </Heading>
            <Box>
              {product.map((el) => (
+              
                <div className="userdiv">
                  <Card className="card" maxW="xs">
                    <p> User id : {el.id}</p>
@@ -115,11 +118,22 @@ const AdminPanel = () => {
          </Box>
        )}
      </Flex>
-     <Button onClick={handlehome}>HOME</Button>
      <Button onClick={handlelogin}>LOGIN</Button>
-     <Button onClick={handleregister}>REGISTER</Button>
-     <Button onClick={handlecart}>CART</Button>
+     
    </Box>
+   <Box>
+   <h1>New customers</h1>
+   <Text textAlign="initial"textColor={"blue"}>
+* Set up an accont with us and you will be able to:
+<br/>
+* Check order status
+<br/>
+* Save multiple addresses to your address book
+<br/>
+* Set your size and monogramming preferences</Text>
+   <Button onClick={handleregister}>REGISTER</Button>
+   </Box>
+   </Flex>
  );
 };
 

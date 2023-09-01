@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
-import Color from "../Color/Color";
+import Color from "./Color/Color";
 import { Button } from "@chakra-ui/react";
 import { useParams, useNavigate } from "react-router-dom";
 const ProductCard = () => {
