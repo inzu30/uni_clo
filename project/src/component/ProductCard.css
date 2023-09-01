@@ -1,5 +1,5 @@
 .product-card {
-  display: flex;
+  /* display: flex; */
   padding: 16px;
   width: 400px;
   margin: 10px auto;
@@ -80,14 +80,9 @@
   }
   .product-image{
     display: inline;
-<<<<<<< HEAD:project/src/component/ProductCard/ProductCard.css
     width: 400px;
     /* height: 100%;
     position: fixed; */
-=======
-    width: 60%;
-    height: 100px;
->>>>>>> 2afcb154a8d96b506d74fe81c94aefb3538ebb70:project/src/component/ProductCard.css
   }
 }
 @media (min-width:748px)
