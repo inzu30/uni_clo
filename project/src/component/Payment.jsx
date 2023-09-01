@@ -11,7 +11,7 @@ function Payment() {
         <input type="text" id="expiry-date" className="input-field" placeholder="MM/YY" required />
         <label htmlFor="cvv">CVV</label>
         <input type="text" id="cvv" className="input-field" placeholder="CVV" required />
-        <button type="submit" className="pay-button">Pay Now</button>
+        <button type="submit" className="pay-button" onClick={()=>alert('Payment Successfull')}> Pay Now</button>
       </form>
     </div>
   );

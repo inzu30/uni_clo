@@ -833,6 +833,22 @@
       "phone": "234567",
       "lastName": "Patra",
       "id": 4
+    },
+    {
+      "email": "ashutoshmishra79753@gmail.com",
+      "password": "12345678",
+      "firstName": "Ashutosh",
+      "phone": "8237983",
+      "lastName": "mishra",
+      "id": 5
+    },
+    {
+      "email": "ashutoshmishra79753@gmail.com",
+      "password": "12345678",
+      "firstName": "Ashutosh",
+      "phone": "8237983",
+      "lastName": "mishra",
+      "id": 6
     }
   ]
 }
