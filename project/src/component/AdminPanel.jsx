@@ -51,6 +51,7 @@ const AdminPanel = () => {
   }
 
  return (
+  <>
   <Flex>
    <Box p={4}>
      <Heading as="h1" size="xl" mb={4}>
@@ -134,7 +135,10 @@ const AdminPanel = () => {
    <Button onClick={handleregister}>REGISTER</Button>
    </Box>
    </Flex>
+   </>
  );
 };
+
+  
 
 export default AdminPanel;
