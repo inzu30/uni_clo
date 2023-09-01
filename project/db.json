@@ -173,7 +173,7 @@
     {
       "id": 18,
       "image": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwc863886c/hi-res/JEP0340NAV_COLLAR_DETAIL.jpg?sw=600&sh=750",
-      "title": "https://www.charlestyrwhitt.com/on/demandware.static/-/Sites-ctshirts-master/default/dw412dd8ca/JEP0406RYL_MODEL_DETAIL.jpg",
+      "title": "Smart Jersey Polo - Blue",
       "price": "657",
       "color": "blue",
       "rating": "2.3",
@@ -833,6 +833,14 @@
       "phone": "234567",
       "lastName": "Patra",
       "id": 4
+    },
+    {
+      "email": "ayushpatra496@gmail.com",
+      "password": "uggiggouguo",
+      "firstName": "Ayush",
+      "phone": "234567",
+      "lastName": "Patra",
+      "id": 5
     }
   ]
 }
