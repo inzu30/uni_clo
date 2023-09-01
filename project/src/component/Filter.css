@@ -10,7 +10,7 @@
 }
 .selectContainer {
   position: fixed;
-  top: 90px;
+  top: 70px;
   right: 20px;
   z-index: 1; 
   background-color: #fff;
