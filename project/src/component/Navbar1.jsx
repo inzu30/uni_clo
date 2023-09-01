@@ -21,10 +21,10 @@ const NavBar1 = () => {
         maxW="1200px"
         mx="auto"
       >
-          <Flex alignItems="center">
+          <Flex alignItems="left">
           <Link as={RouterLink} to="/admin" mr={1}>
-           <button><img src='admin.png'
-           alt="Admin"
+           <button><img src='/admin.png'
+           alt=""
            height={5}
            width={"17%"}/>
            </button>
@@ -32,7 +32,7 @@ const NavBar1 = () => {
         </Flex>
         <Link as={RouterLink} to="/">
           <img
-            src="logo-png.png"
+            src="/logo-png.png"
             alt="UNI_CLO"
             height={50}
             width={300}
@@ -41,10 +41,10 @@ const NavBar1 = () => {
         <HStack/>
         {' '}
         <Box >
-        <Flex alignItems="center">
+        <Flex alignItems="right">
           <Link as={RouterLink} to="/cart" mr={1}>
-           <button><img src='cart.png'
-           alt="cart"
+           <button><img src='/cart.png'
+           alt=""
            height={5}
            width={"35%"}/>
            </button>

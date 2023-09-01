@@ -1,8 +1,7 @@
 .product-card {
-  display: flex;
+  /* display: flex; */
   padding: 16px;
-  width: 200%;
-  height: 60%;
+  width: 400px;
   margin: 10px auto;
 }
 
@@ -81,7 +80,26 @@
   }
   .product-image{
     display: inline;
-    width: 60%;
-    height: 100px;
+    width: 400px;
+    /* height: 100%;
+    position: fixed; */
+  }
+}
+@media (min-width:748px)
+{
+  .product-image{
+    display: inline ;
+    width: 400px;
+  }
+}
+@media (max-width:379px)
+{
+  .product-image{
+    display: inline;
+    margin: 10px;
+  }
+  .product-title{
+    padding-left: 10px;
+    width: auto;
   }
 }
